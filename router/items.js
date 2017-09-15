@@ -17,6 +17,9 @@ router.post('/add',(req, res)=>{
   .then(add=>{
     res.redirect('/items');
   })
+  .ctach(err=>{
+    console.log(err)
+  })
 });
 router.get('/edit/:id',(req, res)=>{
   models.Item.findOne({where:{id:req.params.id}})

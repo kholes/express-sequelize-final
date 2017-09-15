@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%- include partial/header %>
+<body>
+  <h3>Suppliers Update</h3>
+  <a href="/suppliers">Home</a>
+  <form action="/suppliers/edit/<%-suppliers.id%>" method="post">
+    <p>Name</p>
+    <input type="text" name="name" value="<%-suppliers.name%>">
+    <p>Kota</p>
+    <input type="text" name="kota" value="<%-suppliers.kota%>">
+    <p>
+    <input type="submit" value="UPDATE">
+    </p>
+  </form>
+</body>
+</html>

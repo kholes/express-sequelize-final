@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<%- include partial/header %>
+<body>
+  <h3>items</h3>
+  <a href="/">HOME</a>
+  <a href="/items/add">ADD</a>
+  <table>
+    <th>ID</id>
+    <th>NAME</id>
+    <th>BRAND</id>
+    <th>CODE ITEM</id>
+    <th>ACTIONS</id>
+    <% items.forEach(i=>{%>
+    <tr>
+      <td><%-i.id%></td>
+      <td><%-i.name%></td>
+      <td><%-i.brand%></td>
+      <td><%-i.codeitem%></td>
+      <td><a href="/items/edit/<%-i.id%>">Edit</a><a href="/items/delete/<%-i.id%>">Delete</a></td>
+    </tr>
+    <%})%>
+  </table>
+</body>
+</html>

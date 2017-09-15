@@ -4,36 +4,36 @@ let router = express.Router();
 let models = require('../models');
 
 router.get('/',(req, res)=>{
-   models.Suppliers.findAll()
+   models.Item.findAll()
   .then(all => {
-    res.render('suppliers',{suppliers:all});
+    res.render('items',{items:all});
   })
 });
 router.get('/add',(req, res)=>{
-  res.render('suppliers_add');
+  res.render('items_add');
 });
 router.post('/add',(req, res)=>{
-  models.Suppliers.create(req.body)
+  models.Item.create(req.body)
   .then(add=>{
-    res.redirect('/suppliers');
+    res.redirect('/items');
   })
 });
 router.get('/edit/:id',(req, res)=>{
-  models.Suppliers.findOne({where:{id:req.params.id}})
+  models.Item.findOne({where:{id:req.params.id}})
   .then(edit=>{
-    res.render('suppliers_edit',{suppliers:edit});
+    res.render('items_edit',{items:edit});
   })
 });
 router.post('/edit/:id',(req, res)=>{
-  models.Suppliers.update(req.body,{where:{id:req.params.id}})
+  models.Item.update(req.body,{where:{id:req.params.id}})
   .then(edit=>{
-    res.redirect('/suppliers');
+    res.redirect('/items');
   })
 });
 router.get('/delete/:id',(req, res)=>{
-  models.Suppliers.destroy({where:{id:req.params.id}})
+  models.Item.destroy({where:{id:req.params.id}})
   .then(del=>{
-    res.redirect('/suppliers');
+    res.redirect('/items');
   })
 });
 module.exports = router;

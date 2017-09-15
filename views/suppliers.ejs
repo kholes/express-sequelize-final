@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<%- include partial/header %>
+<body>
+  <h3>Suppliers</h3>
+  <a href="/">HOME</a>
+  <a href="/suppliers/add">ADD</a>
+  <table>
+    <th>ID</id>
+    <th>NAME</id>
+    <th>KOTA</id>
+    <th>ACTIONS</id>
+    <% suppliers.forEach(i=>{%>
+    <tr>
+      <td><%-i.id%></td>
+      <td><%-i.name%></td>
+      <td><%-i.kota%></td>
+      <td><a href="/suppliers/edit/<%-i.id%>">Edit</a><a href="/suppliers/delete/<%-i.id%>">Delete</a></td>
+    </tr>
+    <%})%>
+  </table>
+</body>
+</html>

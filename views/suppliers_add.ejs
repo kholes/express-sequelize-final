@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%- include partial/header %>
+<body>
+  <h3>Suppliers</h3>
+  <a href="/suppliers">Show All</a>
+  <form action="/suppliers/add" method="post">
+    <p>Name</p>
+    <input type="text" name="name" placeholder="input name">
+    <p>Kota</p>
+    <input type="text" name="kota" placeholder="input kota">
+    <p>
+    <input type="submit" value="ADD">
+    </p>
+  </form>
+</body>
+</html>

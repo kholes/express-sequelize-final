@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<%- include partial/header %>
+<body>
+  <h3>Items</h3>
+  <a href="/items">Show All</a>
+  <form action="/items/add" method="post">
+    <p>Name</p>
+    <input type="text" name="name" placeholder="input name">
+    <p>Brand</p>
+    <input type="text" name="brand" placeholder="input brand">
+    <p>Code item</p>
+    <input type="text" name="codeitem" placeholder="input codeitem">
+    <p>
+    <input type="submit" value="ADD">
+    </p>
+  </form>
+</body>
+</html>
